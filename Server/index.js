@@ -1,33 +1,43 @@
 require('dotenv').config();
+const express = require('express'); // <-- NEW
 const mongoose = require('mongoose');
+const twilio = require('twilio');
 
-// This line reads the MONGO_URI from the environment variables
-// On Render, it will be the value you just set.
-// For local development, it will read from your .env file.
+const app = express(); // <-- NEW
+
+// --- Database Connection ---
 const dbURI = process.env.MONGO_URI;
-
 mongoose.connect(dbURI)
   .then(() => console.log('Successfully connected to MongoDB Atlas!'))
   .catch((error) => {
-    console.error('!!! DATABASE CONNECTION FAILED:', error); // <-- More descriptive log
-    process.exit(1); // <-- Force exit with a failure code
+    console.error('!!! DATABASE CONNECTION FAILED:', error);
+    process.exit(1);
   });
 
-  const twilio = require('twilio');
-
-// Initialize the Twilio client using the environment variables
+// --- Twilio Setup ---
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
-// Example function to send a message
 function sendNotification(messageBody) {
   client.messages
     .create({
       body: messageBody,
-      from: process.env.TWILIO_PHONE_NUMBER, // Your Twilio number
-      to: process.env.MY_PHONE_NUMBER        // Your personal number
+      from: process.env.TWILIO_PHONE_NUMBER,
+      to: process.env.MY_PHONE_NUMBER
     })
     .then(message => console.log('SMS notification sent!', message.sid))
     .catch(error => console.error('Error sending SMS:', error));
 }
+
+// --- Server Routes ---
+// This is a test route to check if your server is running
+app.get('/api', (req, res) => { // <-- NEW
+  res.send('Backend server is alive and running!');
+});
+
+// --- Start The Server ---
+const PORT = process.env.PORT || 5000; // <-- NEW: Use Render's port or 5000 for local
+app.listen(PORT, () => { // <-- NEW
+  console.log(`Server is listening on port ${PORT}`);
+});
