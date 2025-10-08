@@ -1,0 +1,57 @@
+/* src/Components/BottomNav.module.css */
+
+.bottomNav {
+  /* This is the key: It's hidden by default on desktop */
+  display: none; 
+  
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  
+  border-radius: 50px;
+  border: 1px solid #ffffff1a;
+  z-index: 1000;
+}
+
+/* This rule shows the component ONLY on mobile screens */
+@media (max-width: 768px) {
+  .bottomNav {
+    display: flex;
+  }
+}
+
+/* Style for all icons (the inactive state) */
+.bottomNav a {
+  color: var(--text-primary); 
+  font-size: 1.4rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Style for ONLY the active icon */
+.bottomNav a.active {
+  background-color: #A3F6A3;
+  color: #1E1B2E;
+  transform: scale(1.1);
+}
+
+/* A hover effect for inactive icons */
+.bottomNav a:not(.active):hover {
+  color: white;
+  transform: scale(1.2);
+}

@@ -1,0 +1,123 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  width: 95%;
+  margin-inline: auto;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: 1px solid #ffffff1a;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: var(--accent-pink);
+}
+
+.navLinks li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+  transition: width 0.3s ease;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.themeToggle {
+  background: var(--btn-bg);
+  border: none;
+  color: var(--text-primary);
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.themeToggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  color: var(--accent-pink);
+}
+
+.menuIcon {
+  display: none;
+}
+
+
+/* --- MOBILE VIEW STYLES --- */
+/* This block correctly handles the navbar on small screens */
+@media (max-width: 768px) {
+  /* Keep the navbar container visible but make it transparent */
+  .navbar {
+    display: flex;
+    justify-content: flex-end; /* Pushes the toggle to the right */
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+    top: 0;
+  }
+
+  /* Hide the logo, links, and the old hamburger menu icon */
+  .navbar .logo,
+  .navbar .navLinks,
+  .navbar .menuIcon {
+    display: none;
+  }
+}
+
+.lightThemeLogo {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: var(--accent-pink);
+}
