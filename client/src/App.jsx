@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar.jsx'; 
 import BottomNav from './Components/BottomNav.jsx';
+import HeroSection from './Components/HeroSection.jsx';
 import './App.css';
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
       
       {/* Other portfolio content goes here */}
       <main style={{ padding: '2rem 5%' }}>
-        <h1>Hello there!!</h1>
       </main>
+      <HeroSection />
       <BottomNav activeLink={activeLink} setActiveLink={setActiveLink} />
     </div>
   );
