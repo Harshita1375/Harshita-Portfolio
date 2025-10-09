@@ -1,10 +1,7 @@
-// src/Components/BottomNav.jsx
-
 import React from 'react';
 import styles from './BottomNav.module.css';
 import { FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from 'react-icons/fa';
 
-// Accept the activeLink state and the function to update it
 const BottomNav = ({ activeLink, setActiveLink }) => {
   return (
     <nav className={styles.bottomNav}>

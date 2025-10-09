@@ -1,9 +1,5 @@
-/* src/Components/BottomNav.module.css */
-
 .bottomNav {
-  /* This is the key: It's hidden by default on desktop */
   display: none; 
-  
   position: fixed;
   bottom: 1rem;
   left: 50%;
