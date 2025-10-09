@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <h2>Get In Touch</h2>
       <p className="contact-subtitle">
         I’m currently looking for new opportunities, my inbox is always open My inbox is open for collaborations, questions, or a friendly hello. Let's connect!

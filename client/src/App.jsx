@@ -23,9 +23,13 @@ function App() {
       
       {/* Other portfolio content goes here */}
       <main style={{ padding: '2rem 5%' }}>
+        <section id="home">
+          <HeroSection />
+        </section>
       </main>
-      <HeroSection />
-      <ContactForm />
+      <section id="contact">
+        <ContactForm />
+      </section>
       <BottomNav activeLink={activeLink} setActiveLink={setActiveLink} />
     </div>
   );
