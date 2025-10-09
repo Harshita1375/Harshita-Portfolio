@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar.jsx'; 
 import BottomNav from './Components/BottomNav.jsx';
 import HeroSection from './Components/HeroSection.jsx';
+import ContactForm from './Components/ContactForm.jsx';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <main style={{ padding: '2rem 5%' }}>
       </main>
       <HeroSection />
+      <ContactForm />
       <BottomNav activeLink={activeLink} setActiveLink={setActiveLink} />
     </div>
   );

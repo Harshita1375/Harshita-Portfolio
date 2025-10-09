@@ -1,0 +1,86 @@
+.contact-section {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  /* Use your accent color for a nice gradient effect */
+  background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Standard property */
+  text-fill-color: transparent; /* Standard property */
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--btn-bg); /* Use button bg for border */
+  border-radius: 8px;
+  background-color: transparent; /* Let the section background show through slightly */
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Important for padding and width calculation */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-primary);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 10px var(--accent-pink);
+}
+
+.submit-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  background-color: var(--accent-pink);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.response-message {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
