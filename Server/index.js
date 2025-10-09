@@ -2,11 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const twilio = require('twilio');
-
+const cors = require('cors');
 const app = express();
 
-// --- Middleware ---
-// This is crucial for your server to be able to read the JSON data from the form
+const corsOptions = {
+  origin: 'https://harshita-tiwary.vercel.app',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions)); 
 app.use(express.json()); 
 
 // --- Database Connection ---
