@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar.jsx';
 import BottomNav from './Components/BottomNav.jsx';
 import HeroSection from './Components/HeroSection.jsx';
 import ContactForm from './Components/ContactForm.jsx';
+import Projects from './Components/Projects.jsx';
 import './App.css';
 
 function App() {
@@ -21,12 +22,14 @@ function App() {
     <div>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       
-      {/* Other portfolio content goes here */}
       <main style={{ padding: '2rem 5%' }}>
         <section id="home">
           <HeroSection />
         </section>
       </main>
+      <section id="project">
+        <Projects />  
+      </section>       
       <section id="contact">
         <ContactForm />
       </section>

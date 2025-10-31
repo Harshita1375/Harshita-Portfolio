@@ -1,0 +1,183 @@
+:root {
+  --bg-main: #0b071b;
+  --bg-card: #1a1a2e;
+  --text-light: #ffffff;
+  --text-secondary: #c0c0c0;
+  --text-label: #a98eff;
+  --accent-color: #a98eff;
+}
+
+.projectsSection {
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.sectionLabel {
+  text-align: center;
+  color: var(--text-label);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  padding: 2rem 2rem;
+  gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  -webkit-mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 5%, black 95%,
+      transparent 100%);
+  mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 5%, black 95%,
+      transparent 100%);
+  
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) rgba(0, 0, 0, 0.2);
+}
+
+.scrollContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+.projectCard {
+  flex: 0 0 80vw;
+  max-width: 350px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--bg-card);
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: scale(1.03);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.projectCard:hover .cardImage {
+  transform: scale(1.1);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .cardOverlay {
+  opacity: 1;
+}
+
+.cardTitle {
+  color: var(--text-light);
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.cardCategory {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.sliderWrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 4rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--bg-main);
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .projectCard {
+    flex-basis: 350px;
+  }
+
+  .leftArrow {
+    left: calc(50% - 600px - 2.5rem);
+  }
+
+  .rightArrow {
+    right: calc(50% - 600px - 2.5rem);
+  }
+}
+
