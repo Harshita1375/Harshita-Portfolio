@@ -81,9 +81,9 @@
   text-decoration: none;
   color: inherit;
 
-  flex: 0 0 80vw;
+  flex: 0 0 75vw; 
   max-width: 350px;
-  height: 450px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -134,7 +134,7 @@
 
 .cardTitle {
   color: #FFFFFF; 
-  font-size: 2.25rem; 
+  font-size: 1.75rem; 
   font-weight: 600;  
   margin: 0;
 }
@@ -142,7 +142,7 @@
 .cardCategory {
   color: #FFFFFF; 
   opacity: 0.8; 
-  font-size: 1.1rem; 
+  font-size: 1rem; 
   margin-top: 0.75rem; 
 }
 
