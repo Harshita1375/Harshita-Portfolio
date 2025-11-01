@@ -34,10 +34,10 @@ const BottomNav = ({ activeLink, setActiveLink }) => {
         <FaCode />
       </a>
       <a 
-        href="#portfolio" 
-        onClick={() => setActiveLink('#portfolio')} 
-        className={activeLink === '#portfolio' ? styles.active : ''}
-        aria-label="Portfolio"
+        href="#projects" /* Fixed: lowercase 'p' */
+        onClick={() => setActiveLink('#projects')} /* Fixed: lowercase 'p' */
+        className={activeLink === '#projects' ? styles.active : ''}
+        aria-label="Projects"
       >
         <FaBriefcase />
       </a>

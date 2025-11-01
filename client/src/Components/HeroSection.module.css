@@ -4,12 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem; /* Space between left and right content */
-  min-height: calc(100vh - 80px); /* Adjust height to fill screen below navbar */
-  padding: 4rem 5%; /* Padding around the section */
-  box-sizing: border-box; /* Include padding in element's total width and height */
+  gap: 3rem; 
+  min-height: calc(100vh - 80px); 
+  padding: 4rem 5%; 
+  box-sizing: border-box; 
   position: relative;
-  overflow: hidden; /* Hide anything overflowing the section */
+  overflow: hidden; 
 }
 
 .contentLeft {
@@ -40,9 +40,17 @@
   background-clip: text;
 }
 
+:global(.light) .highlight {
+  background: var(--accent-pink); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .description {
   font-size: 1.1rem;
-  color: rgba(var(--text-primary), 0.8); /* Slightly transparent text */
+  color: rgba(var(--text-primary), 0.8); 
   margin-bottom: 2.5rem;
 }
 
@@ -64,10 +72,10 @@
 
 .primary {
   background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
-  color: var(--text-primary); /* Use text primary for button text in dark mode */
+  color: var(--text-primary); 
   border: none;
 }
-.light .primary { /* Darker text for light theme primary button */
+.light .primary { 
   color: #1E1B2E; 
 }
 
@@ -115,10 +123,9 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  border: 5px solid var(--bg-color); /* Matches background for 'floating' effect */
+  border: 5px solid var(--bg-color); 
 }
 
-/* Decorative shapes for stats */
 .shapeOne, .shapeTwo {
   position: absolute;
   background-color: var(--btn-bg);
@@ -135,19 +142,18 @@
   top: 15%;
   left: -10%;
   transform: rotate(-8deg);
-  background-color: var(--btn-bg); /* Use theme button background */
-  color: var(--text-primary); /* Use theme text primary */
+  background-color: var(--btn-bg); 
+  color: var(--text-primary); 
 }
 
 .shapeTwo {
   bottom: 10%;
   right: -10%;
   transform: rotate(10deg);
-  background-color: var(--btn-bg); /* Use theme button background */
-  color: var(--text-primary); /* Use theme text primary */
+  background-color: var(--btn-bg); 
+  color: var(--text-primary); 
 }
 
-/* Social Media Icons */
 .socialIcons {
   display: flex;
   gap: 1.5rem;

@@ -29,6 +29,14 @@
   background-clip: text;
 }
 
+:global(.light) .logo {
+  background: var(--accent-pink); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .navLinks {
   list-style: none;
   display: flex;

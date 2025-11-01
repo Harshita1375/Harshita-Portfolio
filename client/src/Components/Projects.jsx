@@ -2,15 +2,20 @@ import React, { useRef } from 'react';
 import styles from './Projects.module.css';
 import { projectData } from '../project_data';
 
-const ProjectCard = ({ title, category, imageUrl }) => {
+const ProjectCard = ({ title, category, imageUrl, projecturl }) => {
   return (
-    <div className={styles.projectCard}>
+    <a 
+      href={projecturl} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className={styles.projectCard} 
+    >
       <img src={imageUrl} alt={title} className={styles.cardImage} />
       <div className={styles.cardOverlay}>
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardCategory}>{category}</p>
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -31,8 +36,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      <h3 className={styles.sectionLabel}>WORK</h3>
-      <h2 className={styles.sectionTitle}>Dig into my universe</h2>
+      <h2 className={styles.sectionTitle}>Projects</h2>
 
       <div className={styles.sliderWrapper}>
         <button className={`${styles.arrow} ${styles.leftArrow}`} onClick={scrollLeft} aria-label="Scroll left">
@@ -46,6 +50,7 @@ const Projects = () => {
               title={project.title}
               category={project.category}
               imageUrl={project.imageUrl}
+              projecturl={project.projecturl}
             />
           ))}
         </div>

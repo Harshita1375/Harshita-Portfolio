@@ -1,28 +1,36 @@
 // A sample list of your projects
 // You can replace this with your own images and details
+import plabai from "./assets/project_images/plan_b_ai.png";
+import ecoverse from "./assets/project_images/EcoVerse.png";
+import email from "./assets/project_images/email.png"
+import hybrid from "./assets/project_images/hybrid.png"
 export const projectData = [
   {
     id: 1,
-    title: "E-Commerce Website",
-    category: "Commerce, Shopify",
-    imageUrl: "https://tse4.mm.bing.net/th/id/OIP.iRKx8qzWOp_M9zUJalLrtQHaFm?pid=Api&P=0&h=180"
+    title: "Jharkhand Tourism Website",
+    category: "Web Dev, AI, Ecommerce, Travel",
+    imageUrl: ecoverse,
+    projecturl: "https://ecoverse-sih.vercel.app/"
   },
   {
     id: 2,
-    title: "Branding Design",
-    category: "Design, Figma",
-    imageUrl: "https://tse2.mm.bing.net/th/id/OIF.MkWwXyyGjctGArbjepVwBA?pid=Api&P=0&h=180"
+    title: "Email Marketing Campaign",
+    category: "Machine Learning, Deep Learning",
+    imageUrl: email,
+    projecturl: "https://github.com/Harshita1375/Improve_Email_Campaign_Results"
   },
   {
     id: 3,
-    title: "Mobile App UI",
-    category: "UI/UX, Mobile",
-    imageUrl: "https://tse1.mm.bing.net/th/id/OIF.oVF6hoZIiwxuz6BVv1GXeA?pid=Api&P=0&h=180"
+    title: "Intelligent Career Guidance System",
+    category: "Web Dev, AI",
+    imageUrl: plabai,
+    projecturl: "https://github.com/Harshita1375/Plan-B-AI?tab=readme-ov-file"
   },
   {
     id: 4,
-    title: "Portfolio Website",
-    category: "Web Dev, React",
-    imageUrl: "https://tse4.mm.bing.net/th/id/OIF.4M6EkgsRmXlX2iRbNnUocA?pid=Api&P=0&h=180"
+    title: "House Hold Water Consumption Pattern",
+    category: "Machine Learning, Time Series Data, Hybrid Model",
+    imageUrl: hybrid,
+    projecturl: "https://github.com/Harshita1375/Household_water_consumption_pattern/tree/main"
   }
 ];

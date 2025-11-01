@@ -1,12 +1,3 @@
-:root {
-  --bg-main: #0b071b;
-  --bg-card: #1a1a2e;
-  --text-light: #ffffff;
-  --text-secondary: #c0c0c0;
-  --text-label: #a98eff;
-  --accent-color: #a98eff;
-}
-
 .projectsSection {
   padding: 4rem 0;
   overflow: hidden;
@@ -14,7 +5,7 @@
 
 .sectionLabel {
   text-align: center;
-  color: var(--text-label);
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -22,11 +13,25 @@
   margin-bottom: 0.5rem;
 }
 
+:global(.light) .sectionLabel {
+  background: var(--accent-pink); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .sectionTitle {
   text-align: center;
-  color: var(--text-light);
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 3.5rem; 
+  font-weight: 700;  
+  margin-bottom: 3rem; 
+  background: var(--accent-pink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
 }
 
 .scrollContainer {
@@ -45,37 +50,48 @@
       transparent 100%);
   
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) rgba(0, 0, 0, 0.2);
+  scrollbar-color:  #a98eff rgba(0, 0, 0, 0.1);
 }
+
+
+:global(.light) .scrollContainer {
+  scrollbar-color: var(--accent-pink) rgba(0, 0, 0, 0.1);
+}
+
 
 .scrollContainer::-webkit-scrollbar {
   height: 8px;
 }
 
 .scrollContainer::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1); 
   border-radius: 4px;
 }
 
 .scrollContainer::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
+  background: var(--accent-pink); 
   border-radius: 4px;
 }
 
 .scrollContainer::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
+  background: var(--accent-purple); 
 }
 
 .projectCard {
+  text-decoration: none;
+  color: inherit;
+
   flex: 0 0 80vw;
   max-width: 350px;
   height: 450px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  background-color: var(--bg-card);
+  background-color: var(--btn-bg); 
   scroll-snap-align: center;
   transition: transform 0.3s ease;
+  
+  display: block; 
 }
 
 .projectCard:hover {
@@ -85,8 +101,9 @@
 .cardImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   transition: transform 0.4s ease;
+  pointer-events: none;
 }
 
 .projectCard:hover .cardImage {
@@ -108,6 +125,7 @@
   padding: 1rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .projectCard:hover .cardOverlay {
@@ -115,15 +133,17 @@
 }
 
 .cardTitle {
-  color: var(--text-light);
-  font-size: 1.75rem;
+  color: #FFFFFF; 
+  font-size: 2.25rem; 
+  font-weight: 600;  
   margin: 0;
 }
 
 .cardCategory {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  color: #FFFFFF; 
+  opacity: 0.8; 
+  font-size: 1.1rem; 
+  margin-top: 0.75rem; 
 }
 
 .sliderWrapper {
@@ -137,9 +157,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--btn-bg); 
+  color: var(--text-primary); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -154,9 +174,9 @@
 }
 
 .arrow:hover {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--bg-main);
+  background: var(--accent-pink); 
+  border-color: var(--accent-pink);
+  color: var(--bg-color); 
 }
 
 .leftArrow {
