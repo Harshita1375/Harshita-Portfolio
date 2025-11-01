@@ -81,9 +81,9 @@
   text-decoration: none;
   color: inherit;
 
-  flex: 0 0 75vw; 
+  flex: 0 0 80vw;
   max-width: 350px;
-  height: 400px;
+  height: 450px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -134,7 +134,7 @@
 
 .cardTitle {
   color: #FFFFFF; 
-  font-size: 1.75rem; 
+  font-size: 2.25rem; 
   font-weight: 600;  
   margin: 0;
 }
@@ -142,7 +142,7 @@
 .cardCategory {
   color: #FFFFFF; 
   opacity: 0.8; 
-  font-size: 1rem; 
+  font-size: 1.1rem; 
   margin-top: 0.75rem; 
 }
 
@@ -190,7 +190,18 @@
 @media (min-width: 768px) {
   .projectCard {
     flex-basis: 350px;
+    height: 350px; /* Restore original height on desktop */
   }
+
+  /* --- ADD THESE RULES --- */
+  .cardTitle {
+    font-size: 2.25rem; /* Restore original font size on desktop */
+  }
+
+  .cardCategory {
+    font-size: 1.1rem; /* Restore original font size on desktop */
+  }
+  
 
   .leftArrow {
     left: calc(50% - 600px - 2.5rem);
