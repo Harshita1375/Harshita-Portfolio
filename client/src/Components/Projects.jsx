@@ -37,7 +37,7 @@ const Projects = () => {
   return (
     <section id="projects" className={styles.projectsSection}>
       <h2 className={styles.sectionTitle}>Projects</h2>
-
+      <h3>Data, Code, and Design in Action</h3>
       <div className={styles.sliderWrapper}>
         <button className={`${styles.arrow} ${styles.leftArrow}`} onClick={scrollLeft} aria-label="Scroll left">
           &lt;

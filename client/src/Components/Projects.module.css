@@ -23,7 +23,7 @@
 
 .sectionTitle {
   text-align: center;
-  font-size: 3.5rem; 
+  font-size: 2.5rem; 
   font-weight: 700;  
   margin-bottom: 3rem; 
   background: var(--accent-pink);
@@ -38,7 +38,7 @@
   display: flex;
   overflow-x: auto;
   padding: 2rem 2rem;
-  gap: 1.5rem;
+  gap: 0.5rem;
   scroll-snap-type: x mandatory;
   -webkit-mask-image: linear-gradient(to right,
       transparent 0%,
@@ -83,7 +83,7 @@
 
   flex: 0 0 80vw;
   max-width: 350px;
-  height: 450px;
+  height: 380px;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -134,14 +134,14 @@
 
 .cardTitle {
   color: #FFFFFF; 
-  font-size: 2.25rem; 
+  font-size: 1.5rem; 
   font-weight: 600;  
   margin: 0;
 }
 
 .cardCategory {
   color: #FFFFFF; 
-  opacity: 0.8; 
+  opacity: 0.9; 
   font-size: 1.1rem; 
   margin-top: 0.75rem; 
 }
@@ -161,12 +161,12 @@
   color: var(--text-primary); 
   border: 1px solid rgba(255, 255, 255, 0.1); 
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
@@ -188,12 +188,15 @@
 }
 
 @media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3.5rem; /* Restore original size on desktop */
+  }
+  
   .projectCard {
     flex-basis: 350px;
-    height: 350px; /* Restore original height on desktop */
+    height: 450px; /* Restore original height on desktop */
   }
 
-  /* --- ADD THESE RULES --- */
   .cardTitle {
     font-size: 2.25rem; /* Restore original font size on desktop */
   }
@@ -202,6 +205,9 @@
     font-size: 1.1rem; /* Restore original font size on desktop */
   }
   
+  .arrow {
+    display: flex; /* Show arrows on desktop */
+  }
 
   .leftArrow {
     left: calc(50% - 600px - 2.5rem);
