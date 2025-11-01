@@ -8,7 +8,7 @@ export const projectData = [
   {
     id: 1,
     title: "Jharkhand Tourism Website",
-    category: "Web Dev, AI, Ecommerce, Travel",
+    category: "Web Dev, AI",
     imageUrl: ecoverse,
     projecturl: "https://ecoverse-sih.vercel.app/"
   },
@@ -22,7 +22,7 @@ export const projectData = [
   {
     id: 3,
     title: "Intelligent Career Guidance System",
-    category: "Web Dev, AI",
+    category: "Web Dev, AI, NLP",
     imageUrl: plabai,
     projecturl: "https://github.com/Harshita1375/Plan-B-AI?tab=readme-ov-file"
   },

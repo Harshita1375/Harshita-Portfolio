@@ -4,6 +4,7 @@ import BottomNav from './Components/BottomNav.jsx';
 import HeroSection from './Components/HeroSection.jsx';
 import ContactForm from './Components/ContactForm.jsx';
 import Projects from './Components/Projects.jsx';
+import Experience from './Components/Experience.jsx';
 import './App.css';
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           <HeroSection />
         </section>
       </main>
+      <section id="experience">
+        <Experience/>  
+      </section>  
       <section id="project">
         <Projects />  
       </section>       

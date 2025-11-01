@@ -95,7 +95,7 @@
 }
 
 .projectCard:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .cardImage {
@@ -121,15 +121,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.678);
   padding: 1rem;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateY(100%); 
+  transition: all 0.4s ease; /* Animate all properties (opacity and transform) */
   pointer-events: none;
 }
 
 .projectCard:hover .cardOverlay {
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .cardTitle {
@@ -137,6 +139,9 @@
   font-size: 1.5rem; 
   font-weight: 600;  
   margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.2s; 
 }
 
 .cardCategory {
@@ -144,6 +149,15 @@
   opacity: 0.9; 
   font-size: 1.1rem; 
   margin-top: 0.75rem; 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.3s; 
+}
+
+.projectCard:hover .cardTitle,
+.projectCard:hover .cardCategory {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sliderWrapper {
