@@ -1,7 +1,8 @@
 .experienceContainer {
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
   max-width: 1000px;
-  margin: 20px auto;
   color: var(--text-primary); 
   padding: 40px 0;
 }

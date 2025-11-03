@@ -99,20 +99,35 @@
 
 /* --- MOBILE VIEW STYLES --- */
 @media (max-width: 768px) {
+  /* --- MOBILE VIEW STYLES (for your TOP navbar) --- */
   .navbar {
-    border: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    top: 0;
-    border-radius: 0;
-    height: 70px;
+    position: sticky; /* Sticks to the top when you scroll */
+    top: 0;          /* Aligns to the very top */
     z-index: 1000;
-    position: sticky;
-    padding: 0 5%;
+
+    /* --- Sizing & Shape --- */
+    width: 100%;        /* Full width of the screen */
+    max-width: none;    /* Removes any max-width limit */
+    height: 70px;       /* Gives it a consistent height */
+    margin: 0;
+    border-radius: 0;   /* Removes the rounded corners */
+
+    /* --- Content Alignment --- */
+    display: flex;
+    justify-content: space-between; /* Pushes items to the edges */
+    align-items: center;
+    padding: 0 5%;      /* Adds 5% "breathing room" on left/right */
+    box-sizing: border-box; /* IMPORTANT: Makes padding work with 100% width */
+
+    /* --- Styling --- */
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-bottom: 1px solid #ffffff1a; /* Adds a subtle line below */
   }
+
+  /* ... your other mobile styles for .menuIcon, .navLinks, etc. ... */
 
   /* This rule hides the navigation links and menu icon */
   .navLinks,

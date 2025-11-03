@@ -18,7 +18,7 @@ body {
 .dark {
   --bg-color: #1E1B2E;
   --text-primary: #EAE8FF;
-  --nav-bg: #1e1b2ec0; /* Navbar with some transparency */
+  --nav-bg: #1e1b2ec0; 
   --btn-bg: #373051;
 }
 
@@ -34,4 +34,11 @@ body {
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0; /* Ensures navbar can be full-width */
+  text-align: center;
 }

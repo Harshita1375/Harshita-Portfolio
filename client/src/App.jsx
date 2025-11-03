@@ -5,7 +5,7 @@ import HeroSection from './Components/HeroSection.jsx';
 import ContactForm from './Components/ContactForm.jsx';
 import Projects from './Components/Projects.jsx';
 import Experience from './Components/Experience.jsx';
-import './App.css';
+import './App.css'; // This file will now control the padding
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -23,20 +23,27 @@ function App() {
     <div>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       
-      <main style={{ padding: '2rem 5%' }}>
+      {/* This <main> tag now wraps ALL your page content.
+        We've removed the inline style.
+      */}
+      <main className="main-content-wrapper">
         <section id="home">
           <HeroSection />
         </section>
+        
+        <section id="experience">
+          <Experience/>  
+        </section>  
+        
+        <section id="project">
+          <Projects />  
+        </section>    
+        
+        <section id="contact">
+          <ContactForm />
+        </section>
       </main>
-      <section id="experience">
-        <Experience/>  
-      </section>  
-      <section id="project">
-        <Projects />  
-      </section>       
-      <section id="contact">
-        <ContactForm />
-      </section>
+      
       <BottomNav activeLink={activeLink} setActiveLink={setActiveLink} />
     </div>
   );
